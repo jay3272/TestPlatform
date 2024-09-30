@@ -33,7 +33,7 @@ namespace TestPlatform.Views
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            //Test SQLite
             PublicVar.connSqlDb = PublicMethod.ConnectSqlite("mydatabase.db");
             PublicVar.connSqlDb.Open();
             PublicVar.connSqlDb.Execute("CREATE TABLE IF NOT EXISTS TestModel (Id INTEGER PRIMARY KEY, Name TEXT)");
