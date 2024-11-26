@@ -9,6 +9,7 @@ namespace TestPlatform.Views
     public interface IMainView
     {
         event EventHandler ShowPetView;
+        event EventHandler ShowAdtranView;
         event EventHandler ShowOwnerView;
         event EventHandler ShowVetsView;
 

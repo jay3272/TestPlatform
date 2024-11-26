@@ -23,8 +23,9 @@ namespace TestPlatform
             Application.SetCompatibleTextRenderingDefault(false);
 
             string sqlConnectionString = ConfigurationManager.ConnectionStrings["SqlConnection"].ConnectionString;
+            string sqlConnectionString2 = ConfigurationManager.ConnectionStrings["SqlConnection2"].ConnectionString;
             IMainView view = new MainView();
-            new MainPresenter(view, sqlConnectionString);
+            new MainPresenter(view, sqlConnectionString,sqlConnectionString2);
 
             Application.Run((Form)view);
         }

@@ -40,6 +40,7 @@
             this.chineseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnPets = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnAdtran = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -154,11 +155,23 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnAdtran
+            // 
+            this.btnAdtran.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdtran.Location = new System.Drawing.Point(960, 202);
+            this.btnAdtran.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAdtran.Name = "btnAdtran";
+            this.btnAdtran.Size = new System.Drawing.Size(174, 45);
+            this.btnAdtran.TabIndex = 4;
+            this.btnAdtran.Text = "Adtran";
+            this.btnAdtran.UseVisualStyleBackColor = true;
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1380, 958);
+            this.Controls.Add(this.btnAdtran);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnPets);
@@ -191,5 +204,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAdtran;
     }
 }

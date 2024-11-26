@@ -13,12 +13,15 @@ namespace TestPlatform.Presenters
     {
         private IMainView mainView;
         private readonly string sqlConnectionString;
+        private readonly string sqlConnectionString2;
 
-        public MainPresenter(IMainView mainView, string sqlConnectionString)
+        public MainPresenter(IMainView mainView, string sqlConnectionString, string sqlConnectionString2)
         {
             this.mainView = mainView;
             this.sqlConnectionString = sqlConnectionString;
+            this.sqlConnectionString2 = sqlConnectionString2;
             this.mainView.ShowPetView += ShowPetsView;
+            this.mainView.ShowAdtranView += ShowAdtranView;
         }
 
         private void ShowPetsView(object sender, EventArgs e)
@@ -26,6 +29,12 @@ namespace TestPlatform.Presenters
             IPetView view = PetView.GetInstace((MainView)mainView);
             IPetRepository repository = new PetRepository(sqlConnectionString);
             new PetPresenter(view, repository);
+        }
+        private void ShowAdtranView(object sender, EventArgs e)
+        {
+            IAdtranView view = AdtranView.GetInstace((MainView)mainView);
+            IAdtranRepository repository = new AdtranRepository(sqlConnectionString2);
+            new AdtranPresenter(view, repository);
         }
     }
 }
