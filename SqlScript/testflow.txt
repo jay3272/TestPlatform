@@ -1,0 +1,9 @@
+id	LevelName	Model	SendCmd	SendValue	ReValue	ReType	ReTest	Result
+1	Setup	Model1	SetPow	5	NULL	NULL	0	NULL
+2	FuncTest	Model1	Throughput	1_2	NULL	NULL	1	NULL
+3	FuncTest	Model1	Throughput	2_1	NULL	NULL	1	NULL
+4	ShopFlow	Model1	SF	T2	NULL	NULL	0	NULL
+5	Upload	Model1	FTP	172.1.1.23	NULL	NULL	0	NULL
+6	Setup	M2	SetPow	12	NULL	NULL	1	NULL
+7	Check	M2	Msgbox	請檢查LED是否閃爍	NULL	NULL	0	NULL
+8	ShowResult	M2	Result	NULL	NULL	NULL	0	NULL

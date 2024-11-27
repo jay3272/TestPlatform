@@ -80,6 +80,7 @@
             this.toolStripLabel1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripLabel1.Name = "toolStripLabel1";
             this.toolStripLabel1.Size = new System.Drawing.Size(188, 135);
+            this.toolStripLabel1.Visible = false;
             // 
             // toolStripButton1
             // 
