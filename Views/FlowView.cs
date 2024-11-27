@@ -123,6 +123,8 @@ namespace TestPlatform.Views
                         cell.Style.BackColor = Color.LightGreen;
                     }
 
+                    var lastCell = row.Cells[row.Cells.Count - 1];
+                    lastCell.Value = "PASS";
                     await Task.Delay(500);
 
                 }
