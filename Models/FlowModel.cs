@@ -46,7 +46,7 @@ namespace TestPlatform.Models
         [DisplayName("ReTest")]
         public bool ReTest { get => reTest; set => reTest = value; }
 
-        [DisplayName("Commenet")]
+        [DisplayName("Result")]
         public string Commenet { get => commenet; set => commenet = value; }
 
     }
