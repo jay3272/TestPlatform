@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -33,7 +35,7 @@ namespace TestPlatform.Views
                     SearchEvent?.Invoke(this, EventArgs.Empty);
             };
             btnStart.Click += delegate { StartEvent?.Invoke(this, EventArgs.Empty); };
-            StartEvent += OnStartEvent;
+            StartEvent += async (sender,e) => await OnStartEventAsync();
             //Others
         }
 
@@ -92,7 +94,7 @@ namespace TestPlatform.Views
             return instance;
         }
         
-        private void OnStartEvent(object sender, EventArgs e)
+        private async Task OnStartEventAsync()
         {
             if (dataGridView.Rows.Count == 0 || dataGridView.Columns.Count == 0)
             {
@@ -100,7 +102,17 @@ namespace TestPlatform.Views
                 return;
             }
 
-            // 遍歷每一行
+            foreach (DataGridViewRow row in dataGridView.Rows)
+            {
+                // 恢復當前行的背景色為預設值
+                foreach (DataGridViewCell cell in row.Cells)
+                {
+                    cell.Style.BackColor = Color.White;
+                }
+            }
+
+            this.lbResult.Text = "___";
+
             foreach (DataGridViewRow row in dataGridView.Rows)
             {
                 if (!row.IsNewRow) // 跳過新增列
@@ -111,15 +123,15 @@ namespace TestPlatform.Views
                         cell.Style.BackColor = Color.LightGreen;
                     }
 
-                    MessageBox.Show("Next");
+                    await Task.Delay(500);
 
-                    // 恢復當前行的背景色為預設值
-                    foreach (DataGridViewCell cell in row.Cells)
-                    {
-                        cell.Style.BackColor = Color.White;
-                    }
                 }
             }
+
+            this.lbResult.Text = "PASS";
+            this.lbResult.ForeColor = Color.White;
+            this.lbResult.BackColor = Color.LightGreen;
+
         }
     }
 }

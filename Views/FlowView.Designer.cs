@@ -52,6 +52,7 @@
             this.txtFlowName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtFlowId = new System.Windows.Forms.TextBox();
+            this.lbResult = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPageFlowList.SuspendLayout();
@@ -104,6 +105,7 @@
             // 
             // tabPageFlowList
             // 
+            this.tabPageFlowList.Controls.Add(this.lbResult);
             this.tabPageFlowList.Controls.Add(this.btnStart);
             this.tabPageFlowList.Controls.Add(this.dataGridView);
             this.tabPageFlowList.Controls.Add(this.label2);
@@ -314,6 +316,16 @@
             this.txtFlowId.Size = new System.Drawing.Size(154, 39);
             this.txtFlowId.TabIndex = 6;
             // 
+            // lbResult
+            // 
+            this.lbResult.AutoSize = true;
+            this.lbResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbResult.Location = new System.Drawing.Point(487, 11);
+            this.lbResult.Name = "lbResult";
+            this.lbResult.Size = new System.Drawing.Size(102, 55);
+            this.lbResult.TabIndex = 10;
+            this.lbResult.Text = "___";
+            // 
             // FlowView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
@@ -363,5 +375,6 @@
         private System.Windows.Forms.TextBox txtFlowId;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Label lbResult;
     }
 }
