@@ -76,6 +76,6 @@ namespace TestPlatform.Presenters
                 flowList = repository.GetByValue(this.view.SearchValue);
             else flowList = repository.GetAll();
             flowBindingSource.DataSource = flowList;
-        }
+        }        
     }
 }

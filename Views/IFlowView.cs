@@ -27,6 +27,7 @@ namespace TestPlatform.Views
 
         //Events
         event EventHandler SearchEvent;
+        event EventHandler StartEvent;
         event EventHandler AddNewEvent;
         event EventHandler EditEvent;
         event EventHandler DeleteEvent;

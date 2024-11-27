@@ -32,6 +32,8 @@ namespace TestPlatform.Views
                 if (e.KeyCode == Keys.Enter)
                     SearchEvent?.Invoke(this, EventArgs.Empty);
             };
+            btnStart.Click += delegate { StartEvent?.Invoke(this, EventArgs.Empty); };
+            StartEvent += OnStartEvent;
             //Others
         }
 
@@ -57,6 +59,7 @@ namespace TestPlatform.Views
 
         //Events
         public event EventHandler SearchEvent;
+        public event EventHandler StartEvent;
         public event EventHandler AddNewEvent;
         public event EventHandler EditEvent;
         public event EventHandler DeleteEvent;
@@ -87,6 +90,36 @@ namespace TestPlatform.Views
                 instance.BringToFront();
             }
             return instance;
+        }
+        
+        private void OnStartEvent(object sender, EventArgs e)
+        {
+            if (dataGridView.Rows.Count == 0 || dataGridView.Columns.Count == 0)
+            {
+                MessageBox.Show("DataGridView 沒有資料！");
+                return;
+            }
+
+            // 遍歷每一行
+            foreach (DataGridViewRow row in dataGridView.Rows)
+            {
+                if (!row.IsNewRow) // 跳過新增列
+                {
+                    // 將當前行的所有儲存格設為綠色
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        cell.Style.BackColor = Color.LightGreen;
+                    }
+
+                    MessageBox.Show("Next");
+
+                    // 恢復當前行的背景色為預設值
+                    foreach (DataGridViewCell cell in row.Cells)
+                    {
+                        cell.Style.BackColor = Color.White;
+                    }
+                }
+            }
         }
     }
 }

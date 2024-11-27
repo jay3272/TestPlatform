@@ -33,6 +33,7 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageFlowList = new System.Windows.Forms.TabPage();
+            this.btnStart = new System.Windows.Forms.Button();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -65,7 +66,7 @@
             this.label1.Location = new System.Drawing.Point(53, 17);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 54);
+            this.label1.Size = new System.Drawing.Size(79, 36);
             this.label1.TabIndex = 0;
             this.label1.Text = "Flow";
             // 
@@ -103,6 +104,7 @@
             // 
             // tabPageFlowList
             // 
+            this.tabPageFlowList.Controls.Add(this.btnStart);
             this.tabPageFlowList.Controls.Add(this.dataGridView);
             this.tabPageFlowList.Controls.Add(this.label2);
             this.tabPageFlowList.Controls.Add(this.btnDelete);
@@ -118,6 +120,17 @@
             this.tabPageFlowList.TabIndex = 0;
             this.tabPageFlowList.Text = "Flow list";
             this.tabPageFlowList.UseVisualStyleBackColor = true;
+            // 
+            // btnStart
+            // 
+            this.btnStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnStart.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnStart.Location = new System.Drawing.Point(648, 8);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(83, 43);
+            this.btnStart.TabIndex = 9;
+            this.btnStart.Text = "Start";
+            this.btnStart.UseVisualStyleBackColor = false;
             // 
             // dataGridView
             // 
@@ -141,7 +154,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(20, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(218, 44);
+            this.label2.Size = new System.Drawing.Size(145, 29);
             this.label2.TabIndex = 5;
             this.label2.Text = "Search flow:";
             // 
@@ -311,7 +324,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FlowView";
-            this.Text = "PetView";
+            this.Text = "FlowView";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -349,5 +362,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtFlowId;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnStart;
     }
 }
