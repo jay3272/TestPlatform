@@ -29,3 +29,4 @@ D:\Work\project\TestPlatform\TestPlatform\obj\Debug\TestPlat.6B026616.Up2Date
 D:\Work\project\TestPlatform\TestPlatform\obj\Debug\TestPlatform.Views.MainView.resources
 D:\Work\project\TestPlatform\TestPlatform\obj\Debug\TestPlatform.Views.PetView.resources
 D:\Work\project\TestPlatform\TestPlatform\obj\Debug\TestPlatform.Views.AdtranView.resources
+D:\Work\project\TestPlatform\TestPlatform\obj\Debug\TestPlatform.Views.FlowView.resources

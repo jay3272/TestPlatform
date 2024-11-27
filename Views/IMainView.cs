@@ -10,6 +10,7 @@ namespace TestPlatform.Views
     {
         event EventHandler ShowPetView;
         event EventHandler ShowAdtranView;
+        event EventHandler ShowFlowView;
         event EventHandler ShowOwnerView;
         event EventHandler ShowVetsView;
 

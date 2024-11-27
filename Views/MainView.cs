@@ -21,10 +21,12 @@ namespace TestPlatform.Views
             InitializeComponent();
             btnPets.Click += delegate { ShowPetView?.Invoke(this, EventArgs.Empty); };
             btnAdtran.Click += delegate { ShowAdtranView?.Invoke(this, EventArgs.Empty); };
+            btnFlow.Click += delegate { ShowFlowView?.Invoke(this, EventArgs.Empty); };
         }
 
         public event EventHandler ShowPetView;
         public event EventHandler ShowAdtranView;
+        public event EventHandler ShowFlowView;
         public event EventHandler ShowOwnerView;
         public event EventHandler ShowVetsView;
 

@@ -22,6 +22,7 @@ namespace TestPlatform.Presenters
             this.sqlConnectionString2 = sqlConnectionString2;
             this.mainView.ShowPetView += ShowPetsView;
             this.mainView.ShowAdtranView += ShowAdtranView;
+            this.mainView.ShowFlowView += ShowFlowView;
         }
 
         private void ShowPetsView(object sender, EventArgs e)
@@ -35,6 +36,12 @@ namespace TestPlatform.Presenters
             IAdtranView view = AdtranView.GetInstace((MainView)mainView);
             IAdtranRepository repository = new AdtranRepository(sqlConnectionString2);
             new AdtranPresenter(view, repository);
+        }
+        private void ShowFlowView(object sender, EventArgs e)
+        {
+            IFlowView view = FlowView.GetInstace((MainView)mainView);
+            IFlowRepository repository = new FlowRepository(sqlConnectionString2);
+            new FlowPresenter(view, repository);
         }
     }
 }

@@ -41,6 +41,7 @@
             this.btnPets = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnAdtran = new System.Windows.Forms.Button();
+            this.btnFlow = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -137,7 +138,7 @@
             // btnPets
             // 
             this.btnPets.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPets.Location = new System.Drawing.Point(1155, 202);
+            this.btnPets.Location = new System.Drawing.Point(1272, 179);
             this.btnPets.Margin = new System.Windows.Forms.Padding(4);
             this.btnPets.Name = "btnPets";
             this.btnPets.Size = new System.Drawing.Size(174, 45);
@@ -147,9 +148,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1155, 277);
+            this.button1.Location = new System.Drawing.Point(1272, 346);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 73);
+            this.button1.Size = new System.Drawing.Size(111, 39);
             this.button1.TabIndex = 2;
             this.button1.Text = "test";
             this.button1.UseVisualStyleBackColor = true;
@@ -158,7 +159,7 @@
             // btnAdtran
             // 
             this.btnAdtran.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdtran.Location = new System.Drawing.Point(960, 202);
+            this.btnAdtran.Location = new System.Drawing.Point(1272, 232);
             this.btnAdtran.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdtran.Name = "btnAdtran";
             this.btnAdtran.Size = new System.Drawing.Size(174, 45);
@@ -166,11 +167,23 @@
             this.btnAdtran.Text = "Adtran";
             this.btnAdtran.UseVisualStyleBackColor = true;
             // 
+            // btnFlow
+            // 
+            this.btnFlow.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFlow.Location = new System.Drawing.Point(1272, 285);
+            this.btnFlow.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFlow.Name = "btnFlow";
+            this.btnFlow.Size = new System.Drawing.Size(174, 45);
+            this.btnFlow.TabIndex = 6;
+            this.btnFlow.Text = "Flow";
+            this.btnFlow.UseVisualStyleBackColor = true;
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1380, 958);
+            this.Controls.Add(this.btnFlow);
             this.Controls.Add(this.btnAdtran);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel1);
@@ -205,5 +218,6 @@
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnAdtran;
+        private System.Windows.Forms.Button btnFlow;
     }
 }
